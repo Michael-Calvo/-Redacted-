@@ -25,7 +25,6 @@ base0F: "b39f9f"
 .root{
     -fx-background-color: #2b2d42;
     -fx-text-fill: #edf2f4;
-    -fx-font-size: 1em;
     -fx-font-weight: bold;
 }
 .pane{
@@ -39,7 +38,6 @@ base0F: "b39f9f"
 .button{
     -fx-background-color: #b7c4da;
     -fx-text-fill: #2b2d42;
-    -fx-font-size: 1em;
     -fx-font-weight: bold;
     -fx-background-radius: 7;
     -fx-pref-width: 10em;

@@ -33,12 +33,15 @@ public class MainController implements Initializable {
         Stage window = (Stage) currentStage.getScene().getWindow();
         //VBox window = FXMLLoader.load(getClass().getResource(_screen + ".fxml"));
         Parent root = FXMLLoader.load(getClass().getResource(_screen+".fxml"));
-
+        
         Scene scene = new Scene(root);
         window.setScene(scene);
         window.show();
     }   
     
+    
+    
+   
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

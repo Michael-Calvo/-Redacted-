@@ -17,16 +17,16 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <CheckBox layoutX="113.0" layoutY="134.0" mnemonicParsing="false" text="Housing" textFill="WHITE" />
-            <CheckBox layoutX="113.0" layoutY="169.0" mnemonicParsing="false" text="Counseling and Things" textFill="WHITE" />
-            <CheckBox layoutX="113.0" layoutY="204.0" mnemonicParsing="false" text="Disablilty Compensation" textFill="WHITE" />
-            <CheckBox layoutX="113.0" layoutY="239.0" mnemonicParsing="false" text="None" textFill="WHITE" />
+            <CheckBox fx:id="Housing" layoutX="113.0" layoutY="134.0" mnemonicParsing="false" text="Housing" textFill="WHITE" />
+            <CheckBox fx:id="CaT" layoutX="113.0" layoutY="169.0" mnemonicParsing="false" text="Counseling and Things" textFill="WHITE" />
+            <CheckBox fx:id="DC" layoutX="113.0" layoutY="204.0" mnemonicParsing="false" text="Disablilty Compensation" textFill="WHITE" />
+            <CheckBox fx:id="None" layoutX="113.0" layoutY="239.0" mnemonicParsing="false" text="None" textFill="WHITE" onAction="#NoneCheck"/>
             <Label layoutX="105.0" layoutY="87.0" text="Which benefits are you interested in?">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Button layoutX="506.0" layoutY="233.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" text="Next" onAction="#next"/>
+            <Button layoutX="459.0" layoutY="224.0" mnemonicParsing="false" onAction="#next" prefHeight="39.0" prefWidth="71.0" text="Next" />
          </children>
          <stylesheets>
             <URL value="@style.css" />

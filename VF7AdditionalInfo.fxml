@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.collections.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-
 
 <VBox prefHeight="300.0" prefWidth="640.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="veteranservice.VF7Controller">
   <children>
@@ -23,22 +16,17 @@
                   <Font size="37.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="274.0" layoutY="199.0" prefHeight="28.0" prefWidth="90.0" >
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                   
-                        <String fx:value="Yes" />
-                        <String fx:value="No" />
-                    
-                    </FXCollections>
-                </items>
-            </ChoiceBox>
             <Label layoutX="115.0" layoutY="92.0" prefHeight="94.0" prefWidth="410.0" text="Are you also interested in non-veteran specific benefits?" wrapText="true">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Button layoutX="498.0" layoutY="227.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" text="Submit" onAction="#next"/>
+            <Button layoutX="498.0" layoutY="227.0" mnemonicParsing="false" onAction="#next" prefHeight="39.0" prefWidth="71.0" text="Submit" />
+            <CheckBox fx:id="AdditionalInfo" layoutX="258.0" layoutY="214.0" mnemonicParsing="false" text="Yes if selected" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
          </children>
     </AnchorPane>
   </children>

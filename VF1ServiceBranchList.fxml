@@ -16,18 +16,18 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <CheckBox layoutX="41.0" layoutY="160.0" mnemonicParsing="false" text="Army" textFill="WHITE" />
-            <CheckBox layoutX="41.0" layoutY="195.0" mnemonicParsing="false" text="Navy" textFill="WHITE" />
-            <CheckBox layoutX="41.0" layoutY="230.0" mnemonicParsing="false" text="Air Force" textFill="WHITE" />
-            <CheckBox layoutX="248.0" layoutY="160.0" mnemonicParsing="false" text="Marines" textFill="WHITE" />
-            <CheckBox layoutX="248.0" layoutY="195.0" mnemonicParsing="false" text="National Guard" textFill="WHITE" />
-            <CheckBox layoutX="248.0" layoutY="230.0" mnemonicParsing="false" text="Coast Guard" textFill="WHITE" />
+            <CheckBox fx:id="ArmyCheckBox" layoutX="41.0" layoutY="160.0" mnemonicParsing="false" text="Army" textFill="WHITE" />
+            <CheckBox fx:id="NavyCheckBox" layoutX="41.0" layoutY="195.0" mnemonicParsing="false" text="Navy" textFill="WHITE" />
+            <CheckBox fx:id="AirForceCheckBox" layoutX="41.0" layoutY="230.0" mnemonicParsing="false" text="Air Force" textFill="WHITE" />
+            <CheckBox fx:id="MarineCheckBox" layoutX="248.0" layoutY="160.0" mnemonicParsing="false" text="Marines" textFill="WHITE" />
+            <CheckBox fx:id="NationalGuardCheckBox" layoutX="248.0" layoutY="195.0" mnemonicParsing="false" text="National Guard" textFill="WHITE" />
+            <CheckBox fx:id="CoastGuardCheckBox" layoutX="248.0" layoutY="230.0" mnemonicParsing="false" text="Coast Guard" textFill="WHITE" />
             <Label layoutX="185.0" layoutY="14.0" prefHeight="68.0" prefWidth="309.0" text="Service Branches">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button layoutX="495.0" layoutY="230.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" text="Next" onAction="#next"/>
+            <Button layoutX="495.0" layoutY="230.0" mnemonicParsing="false" onAction="#next" prefHeight="39.0" prefWidth="71.0" text="Next" />
          </children>
     </AnchorPane>
   </children>

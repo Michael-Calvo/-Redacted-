@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.collections.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 
-<VBox prefHeight="300.0" prefWidth="640.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="veteranservice.VF0Controller">
+<VBox prefHeight="300.0" prefWidth="640.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="veteranservice.VF0Controller">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" stylesheets="@style.css" VBox.vgrow="ALWAYS">
       <children>
@@ -28,17 +22,6 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="genders" layoutX="206.0" layoutY="151.0" prefHeight="26.0" prefWidth="77.0" value="Gender">
-                <items>
-                <FXCollections fx:factory="observableArrayList">
-                    
-                    <String fx:value="Male" />
-                    <String fx:value="Female" />
-                    <String fx:value="Other" />
-                    
-                </FXCollections>
-                </items>
-            </ChoiceBox>
             <Label alignment="CENTER" layoutX="77.0" layoutY="97.0" style="&#10;" text="Email Address:" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
                <font>
                   <Font size="18.0" />
@@ -49,15 +32,18 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="147.0" layoutY="62.0" fx:id="NameTextField"/>
-            <TextField layoutX="214.0" layoutY="103.0" fx:id="EmailTextField"/>
-            <TextField layoutX="135.0" layoutY="193.0" fx:id="AgeTextField"/>
-            <Button layoutX="493.0" layoutY="229.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" text="Next" onAction="#next"/>
+            <TextField fx:id="NameTextField" layoutX="147.0" layoutY="62.0" />
+            <TextField fx:id="EmailTextField" layoutX="214.0" layoutY="103.0" />
+            <TextField fx:id="AgeTextField" layoutX="135.0" layoutY="193.0" />
+            <Button layoutX="493.0" layoutY="229.0" mnemonicParsing="false" onAction="#next" prefHeight="39.0" prefWidth="71.0" text="Next" />
             <Label layoutX="177.0" layoutY="14.0" prefHeight="38.0" prefWidth="340.0" text="Tell me about yourself">
                <font>
                   <Font size="27.0" />
                </font>
             </Label>
+            <CheckBox layoutX="213.0" layoutY="158.0" mnemonicParsing="false" text="Male" textFill="WHITE" fx:id="cb1"/>
+            <CheckBox layoutX="286.0" layoutY="158.0" mnemonicParsing="false" text="Female" textFill="WHITE" fx:id="cb2" />
+            <CheckBox layoutX="364.0" layoutY="158.0" mnemonicParsing="false" text="Other" textFill="WHITE" fx:id="cb3"/>
       </children>
     </AnchorPane>
   </children>

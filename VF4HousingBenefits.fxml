@@ -2,17 +2,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.collections.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="930.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="veteranservice.VF4Controller">
    <children>
@@ -28,92 +21,72 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="259.0" layoutY="244.0" prefHeight="26.0" prefWidth="86.0" >
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                    
-                        <String fx:value="Yes" />
-                        <String fx:value="No" />
-                    
-                    </FXCollections>
-                </items>
-            </ChoiceBox>
             <Label layoutX="73.0" layoutY="281.0" prefHeight="82.0" prefWidth="454.0" text="Are you seeking assistance in paying for rent, mortgages, or utilities?" wrapText="true">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="257.0" layoutY="375.0" prefHeight="26.0" prefWidth="86.0" >
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                    
-                        <String fx:value="Yes" />
-                        <String fx:value="No" />
-                    
-                    </FXCollections>
-                </items>
-            </ChoiceBox>
             <Label layoutX="73.0" layoutY="403.0" prefHeight="106.0" prefWidth="454.0" text="Are you looking for subsidized housing?" wrapText="true">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="257.0" layoutY="502.0" prefHeight="26.0" prefWidth="86.0" >
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                    
-                        <String fx:value="Yes" />
-                        <String fx:value="No" />
-                    
-                    </FXCollections>
-                </items>
-            </ChoiceBox>
             <Label layoutX="76.0" layoutY="551.0" prefHeight="82.0" prefWidth="454.0" text="Are you looking for a voucher to pay for private housing?" wrapText="true">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="257.0" layoutY="636.0" prefHeight="26.0" prefWidth="86.0" >
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                    
-                        <String fx:value="Yes" />
-                        <String fx:value="No" />
-                    
-                    </FXCollections>
-                </items>
-            </ChoiceBox>
             <Label layoutX="73.0" layoutY="678.0" prefHeight="82.0" prefWidth="454.0" text="What kind of housing do you currently live in?" wrapText="true">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <CheckBox layoutX="291.0" layoutY="766.0" mnemonicParsing="false" text="Shelter" textFill="WHITE">
+            <CheckBox fx:id="Shelter" layoutX="291.0" layoutY="766.0" mnemonicParsing="false" text="Shelter" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="291.0" layoutY="813.0" mnemonicParsing="false" text="No Residence" textFill="WHITE">
+            <CheckBox fx:id="None" layoutX="291.0" layoutY="813.0" mnemonicParsing="false" text="No Residence" textFill="WHITE" onAction="#NoneCheck2">
                <font>
                   <Font size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="76.0" layoutY="766.0" mnemonicParsing="false" text="House" textFill="WHITE">
+            <CheckBox fx:id="Hosue" layoutX="76.0" layoutY="766.0" mnemonicParsing="false" text="House" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="76.0" layoutY="813.0" mnemonicParsing="false" text="Apartment" textFill="WHITE">
+            <CheckBox fx:id="Apartment" layoutX="76.0" layoutY="813.0" mnemonicParsing="false" text="Apartment" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="76.0" layoutY="862.0" mnemonicParsing="false" text="Trailer Home" textFill="WHITE">
+            <CheckBox fx:id="TrailerHome" layoutX="76.0" layoutY="862.0" mnemonicParsing="false" text="Trailer Home" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </CheckBox>
-            <Button layoutX="467.0" layoutY="864.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" text="Next" onAction="#next"/>
+            <Button layoutX="467.0" layoutY="864.0" mnemonicParsing="false" onAction="#next" prefHeight="39.0" prefWidth="71.0" text="Next" />
+            <CheckBox fx:id="check1" layoutX="197.0" layoutY="255.0" mnemonicParsing="false" text="Check if Yes" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="check2" layoutX="204.0" layoutY="377.0" mnemonicParsing="false" text="Check if Yes" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="check3" layoutX="204.0" layoutY="509.0" mnemonicParsing="false" text="Check if Yes" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="check4" layoutX="204.0" layoutY="642.0" mnemonicParsing="false" text="Check if Yes" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
          </children>
       </AnchorPane>
    </children>
