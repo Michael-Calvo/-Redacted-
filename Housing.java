@@ -1,5 +1,3 @@
-package javaapplication25;
-
 /**
  *
  * @author biscu
@@ -51,7 +49,5 @@ public class Housing {
 
     public void setHousingType(String housingType) {
         this.housingType = housingType;
-    }
-
-    
+    }   
 }
