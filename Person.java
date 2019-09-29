@@ -22,49 +22,24 @@ public class Person {
         this.subAbuseData=subAbuseData;
     }
 
-    public Person() {
-
-
-
-    }
 
     public MentalHealth getMentalHealthData() {
         return mentalHealthData;
-    }
-
-    public void setMentalHealthData(MentalHealth mentalHealthData) {
-        this.mentalHealthData = mentalHealthData;
     }
 
     public Housing getHousingData() {
         return housingData;
     }
 
-    public void setHousingData(Housing housingData) {
-        this.housingData = housingData;
-    }
-
     public MilitaryBranch getBranchData() {
         return branchData;
-    }
-
-    public void setBranchData(MilitaryBranch branchData) {
-        this.branchData = branchData;
     }
 
     public PhysicalHealth getPhysicalHealthData() {
         return physicalHealthData;
     }
 
-    public void setPhysicalHealthData(PhysicalHealth physicalHealthData) {
-        this.physicalHealthData = physicalHealthData;
-    }
-
     public SubstanceAbuse getSubAbuseData() {
         return subAbuseData;
-    }
-
-    public void setSubAbuseData(SubstanceAbuse subAbuseData) {
-        this.subAbuseData = subAbuseData;
     }
 }
