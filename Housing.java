@@ -3,8 +3,7 @@
  *
  * @author biscu
  */
-public class Housing extends Person {
-
+public class Housing{
     boolean rentTrouble; //If the person needs help paying rent or mortgage
 
     boolean subsidizedHousing; //If person needs subsidized housing
