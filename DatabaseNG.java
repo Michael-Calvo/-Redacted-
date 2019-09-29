@@ -1,4 +1,3 @@
-package javaapplication25;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -26,6 +25,7 @@ public class DatabaseNG {
      
 //libs for MilitaryBranch File
     private static final String MILITARYBRANCH_SHEET_ONE="C:\\Users\\biscu\\Desktop\\CodeLinc\\JavaApplication25\\topics\\MilitaryBranch";
+
     private static final String YES_VALUE ="yes";
     private static String document;
     private static Scanner x;
@@ -36,6 +36,7 @@ public class DatabaseNG {
      * @return depending on what index of arr is true it will output 4 different csvs as an array string
      */
     //Takes a boolean array that has a size of 4
+
     public static  ArrayList getHousing(Housing housingTest) {
         
          boolean housingArray[] = new boolean[4];
