@@ -24,6 +24,7 @@ public class VF3Controller extends MainController{
     
     public void next() throws IOException {
         super.load("VF4HousingBenefits");
+        System.out.println(CheckBoxMethod());
     }
     
      public String CheckBoxMethod(){

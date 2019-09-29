@@ -22,7 +22,7 @@ public class VF6Controller extends MainController{
     
     public void next() throws IOException {
         super.load("VF7AdditionalInfo");
-        CheckBoxMethod();
+        System.out.println(CheckBoxMethod());
     }
     
     public String CheckBoxMethod(){

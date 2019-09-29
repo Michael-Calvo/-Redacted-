@@ -25,7 +25,8 @@ public class VF5Controller extends MainController{
     
     public void next() throws IOException {
         super.load("VF6PhysicalHealthInfo");
-        CheckBoxMethod();
+        
+        System.out.println(CheckBoxMethod());
     }
     
     public String CheckBoxMethod(){

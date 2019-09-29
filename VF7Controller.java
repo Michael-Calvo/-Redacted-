@@ -19,7 +19,7 @@ public class VF7Controller extends MainController{
     
     @FXML private CheckBox AdditionalInfo;
     public void next() throws IOException {
-        CheckBoxMethod();
+        System.out.println(CheckBoxMethod());
     }
     
         public String CheckBoxMethod(){

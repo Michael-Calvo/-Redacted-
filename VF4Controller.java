@@ -33,7 +33,9 @@ public class VF4Controller extends MainController{
     
     @FXML
     public void next() throws IOException {
+        System.out.println(CheckBoxMethod());
         super.load("VF5MentalHealthServices");
+        
     }
     
          public void NoneCheck2(){
