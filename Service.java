@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class service { // Not being implemented right now, but can be used in a database setting
+public class Service { // Not being implemented right now, but can be used in a database setting
     private String name;
     private String number;
     private String address;
