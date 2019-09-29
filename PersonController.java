@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class PersonController {
     private static final String YES_VALUE ="yes";
     //Housing Variables
@@ -20,7 +22,6 @@ public class PersonController {
     //Substance Abuse String
     private static String subAbuseString;
 
-
     private static Housing housing = new Housing(rentTrouble,subsidizedHousing,voucher,housingType);
     private static MentalHealth mhealth = new MentalHealth(mentalHealthString);
     private static MilitaryBranch Milbranch = new MilitaryBranch(branch,fullTime,serviceLength);
@@ -37,7 +38,7 @@ public class PersonController {
      *
      * @return
      */
-    public static boolean[] HousingList( ){
+    public boolean[] HousingList( ){
         boolean housingArray[] =new boolean[3];
         Housing housingTest= person.getHousingData();
 
@@ -124,6 +125,18 @@ public class PersonController {
     }
 
 
+
+public void DataBasePull(){
+     ArrayList<String> housingList = DatabaseNG.getHousing(HousingList());
+
+    ArrayList<String> mentalList= DatabaseNG.getMentalHealth(MentalHealthList());
+
+    ArrayList<String> physicalList = DatabaseNG.getPhysicalHealth(PhysicalHealthList());
+
+    ArrayList<String> SubstanceList = DatabaseNG.getSubstanceAbuse(SubstanceAbuseList());
+
+    ArrayList<String> MiltaryList = DatabaseNG.getMilitaryBranch(MilitaryBranchList());
+}
 
 
 
