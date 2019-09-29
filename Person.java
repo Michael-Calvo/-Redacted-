@@ -8,11 +8,11 @@ import java.util.Date;
  *
  */
 public class Person {
-    MentalHealth mentalHealthData;
-    Housing housingData;
-    MilitaryBranch branchData;
-    PhysicalHealth physicalHealthData;
-    SubstanceAbuse subAbuseData;
+    private MentalHealth mentalHealthData;
+    private Housing housingData;
+    private MilitaryBranch branchData;
+    private PhysicalHealth physicalHealthData;
+    private SubstanceAbuse subAbuseData;
 
     public Person(MentalHealth mentalHealthData, Housing housingData, MilitaryBranch branchData, PhysicalHealth physicalHealthData,SubstanceAbuse subAbuseData){
         this.mentalHealthData=mentalHealthData;
