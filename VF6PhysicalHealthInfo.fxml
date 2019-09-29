@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="veteranservice.VF6Controller">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0" stylesheets="@style.css">
+         <children>
+            <Label layoutX="69.0" layoutY="40.0" text="Physical Health Info">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="163.0" prefHeight="82.0" prefWidth="454.0" text="Do you suffer from any physical disabilities?" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" layoutY="293.0" prefHeight="106.0" prefWidth="454.0" text="Do you need confidential help with managing use of substances?" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="468.0" layoutY="422.0" mnemonicParsing="false" onAction="#next" prefHeight="39.0" prefWidth="71.0" text="Next" />
+            <CheckBox fx:id="Disabilities" layoutX="245.0" layoutY="258.0" mnemonicParsing="false" text="Yes if selected" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Substances" layoutX="245.0" layoutY="422.0" mnemonicParsing="false" text="Yes if selected" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
