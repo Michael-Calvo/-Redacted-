@@ -1,13 +1,8 @@
-/*
- * 
- * 
- * 
- */
 package javaapplication25;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 /**
  *
@@ -31,20 +26,36 @@ public class DatabaseNG {
      
 //libs for MilitaryBranch File
     private static final String MILITARYBRANCH_SHEET_ONE="C:\\Users\\biscu\\Desktop\\CodeLinc\\JavaApplication25\\topics\\MilitaryBranch";
-    
-    String document;
-    private Scanner x;
-    ArrayList<String> arrString = new ArrayList<String>();
+    private static final String YES_VALUE ="yes";
+    private static String document;
+    private static Scanner x;
+    private static ArrayList<String> arrString = new ArrayList<String>();
     /**
      * 
      * @param arr boolean values of questions about housing
      * @return depending on what index of arr is true it will output 4 different csvs as an array string
      */
     //Takes a boolean array that has a size of 4
-    public ArrayList getHousing(boolean[] arr) {
+    public static  ArrayList getHousing(Housing housingTest) {
+        
+         boolean housingArray[] = new boolean[4];
+         if(housingTest.getRentTrouble().equalsIgnoreCase(YES_VALUE)){
+            housingArray[0]=true;
+        }else housingArray[0]=false;
+        if(housingTest.getSubsidizedHousing().equalsIgnoreCase(YES_VALUE)){
+            housingArray[1]=true;
+        }else housingArray[1]=false;
+
+        if(housingTest.getVoucher().equalsIgnoreCase(YES_VALUE)){
+            housingArray[2]=true;
+        }else housingArray[2]=false;
+
+        if(housingTest.getHousingType().equalsIgnoreCase(YES_VALUE)){
+            housingArray[3]=true;
+        }else housingArray[3]=false;
         
         //opens and sends the housing type csv as a ArrayList
-        if (arr[0] == true) {
+        if (housingArray[0] == true) {
 
             try {
                 x = new Scanner(new File(HOUSING_SHEET_ONE));
@@ -62,7 +73,7 @@ public class DatabaseNG {
         }
 
         //opens and sends the rentTrouble csv as an ArrayList
-        if (arr[1] == true) {
+        if (housingArray[1] == true) {
 
             try {
                  x = new Scanner(new File(HOUSING_SHEET_TWO));
@@ -80,7 +91,7 @@ public class DatabaseNG {
 
         }
         //opens and sends the subsidizedHousing csv as an ArrayList
-        if (arr[2] == true) {
+        if (housingArray[2] == true) {
 
             try {
                 x = new Scanner(new File(HOUSING_SHEET_THREE));
@@ -97,7 +108,7 @@ public class DatabaseNG {
             return arrString2;
         }
         //opens and sends the voucher csv as an ArrayList
-        if (arr[3] == true) {
+        if (housingArray[3] == true) {
 
             try {
                 x = new Scanner(new File(HOUSING_SHEET_FOUR));
@@ -121,7 +132,7 @@ public class DatabaseNG {
  * @param b true if veteran has a form of mental health
  * @return if true returns mentalHealth csv as an ArrayList
  */
-    public ArrayList getMentalHealth(boolean b) {
+    public static ArrayList getMentalHealth(boolean b) {
         //if true opens and sends the mHealth csv as an Array List
         if(b==true){            
         try {
@@ -148,7 +159,7 @@ public class DatabaseNG {
      * @return returns Specific csv files as arrayStrings
      */
 
-    public ArrayList getSubstanceAbuse(boolean b) {
+    public static ArrayList getSubstanceAbuse(boolean b) {
         //if true opens and sends the substanceAbuse csv as an Array List
         if(b == true)  {  
         try {
@@ -175,7 +186,7 @@ public class DatabaseNG {
      * @param b if veteran has a physical health problem
      * @return if b is true returns the pDisability csv as an Array List
      */
-    public ArrayList getPhysicalHealth(boolean b) {
+    public static ArrayList getPhysicalHealth(boolean b) {
         if(b == true) {   
         try{
                 x = new Scanner(new File(PHEALTH_SHEET_ONE));
@@ -200,7 +211,7 @@ public class DatabaseNG {
  * @param arr takes boolean values of military branch, fulltime or part, Service length (5yrs)
  * @return returns Specific csv files as arrayStrings 
  */
-    public ArrayList getMilitaryBranch(boolean[] arr) {
+    public static ArrayList getMilitaryBranch(boolean[] arr) {
         if(arr[0]==true)  {  
         try {
             x = new Scanner(new File(MILITARYBRANCH_SHEET_ONE));

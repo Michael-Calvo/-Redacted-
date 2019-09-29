@@ -1,3 +1,4 @@
+package javaapplication25;
 //Object to parse survey data into an object such that the program can
 
 import java.util.Date;
@@ -8,11 +9,11 @@ import java.util.Date;
  *
  */
 public class Person {
-    MentalHealth mentalHealthData;
-    Housing housingData;
-    MilitaryBranch branchData;
-    PhysicalHealth physicalHealthData;
-    SubstanceAbuse subAbuseData;
+    private MentalHealth mentalHealthData;
+    private Housing housingData;
+    private MilitaryBranch branchData;
+    private PhysicalHealth physicalHealthData;
+    private SubstanceAbuse subAbuseData;
 
     public Person(MentalHealth mentalHealthData, Housing housingData, MilitaryBranch branchData, PhysicalHealth physicalHealthData,SubstanceAbuse subAbuseData){
         this.mentalHealthData=mentalHealthData;
@@ -22,49 +23,25 @@ public class Person {
         this.subAbuseData=subAbuseData;
     }
 
-    public Person() {
-
-
-
-    }
 
     public MentalHealth getMentalHealthData() {
         return mentalHealthData;
-    }
-
-    public void setMentalHealthData(MentalHealth mentalHealthData) {
-        this.mentalHealthData = mentalHealthData;
     }
 
     public Housing getHousingData() {
         return housingData;
     }
 
-    public void setHousingData(Housing housingData) {
-        this.housingData = housingData;
-    }
-
     public MilitaryBranch getBranchData() {
         return branchData;
-    }
-
-    public void setBranchData(MilitaryBranch branchData) {
-        this.branchData = branchData;
     }
 
     public PhysicalHealth getPhysicalHealthData() {
         return physicalHealthData;
     }
 
-    public void setPhysicalHealthData(PhysicalHealth physicalHealthData) {
-        this.physicalHealthData = physicalHealthData;
-    }
-
     public SubstanceAbuse getSubAbuseData() {
         return subAbuseData;
     }
-
-    public void setSubAbuseData(SubstanceAbuse subAbuseData) {
-        this.subAbuseData = subAbuseData;
-    }
+    
 }

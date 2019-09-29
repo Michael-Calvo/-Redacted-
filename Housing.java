@@ -1,3 +1,4 @@
+package javaapplication25;
 /**
  *
  * @author biscu
@@ -11,6 +12,10 @@ public class Housing {
     private String voucher; //If person needs vouchers for private housing
 
     private String housingType; //What kind of house are they living in? 
+    
+    public Housing(){
+        
+    }
 
     public Housing(String rentTrouble, String subsidizedHousing, String voucher, String housingType) {
         this.rentTrouble = rentTrouble;
