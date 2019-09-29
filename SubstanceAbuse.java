@@ -10,5 +10,21 @@ package javaapplication25;
  * @author biscu
  */
 public class SubstanceAbuse {
-    
+
+    private String substanceAbuse;
+
+    public SubstanceAbuse(String substanceAbuse) {
+        this.substanceAbuse = substanceAbuse;
+    }
+
+    public String getSubstanceAbuse() {
+        return substanceAbuse;
+    }
+
+    public void setSubstanceAbuse(String substanceAbuse) {
+        this.substanceAbuse = substanceAbuse;
+    }
+
+
+
 }

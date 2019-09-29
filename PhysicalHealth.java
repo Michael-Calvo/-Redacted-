@@ -10,5 +10,19 @@ package javaapplication25;
  * @author biscu
  */
 public class PhysicalHealth {
-    
+
+    private String pDisablility;
+
+    public PhysicalHealth(String pDisablility) {
+        this.pDisablility = pDisablility;
+    }
+
+    public String getpDisablility() {
+        return pDisablility;
+    }
+
+    public void setpDisablility(String pDisablility) {
+        this.pDisablility = pDisablility;
+    }
+
 }

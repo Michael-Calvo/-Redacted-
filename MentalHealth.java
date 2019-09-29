@@ -10,5 +10,19 @@ package javaapplication25;
  * @author biscu
  */
 public class MentalHealth {
-    
+
+    private String mDisability;
+
+    public MentalHealth(String mDisability) {
+        this.mDisability = mDisability;
+    }
+
+    public void setmDisability(String mDisability) {
+        this.mDisability = mDisability;
+    }
+
+    public String getmDisability() {
+        return mDisability;
+    }
+
 }
