@@ -1,7 +1,9 @@
+
 import java.util.ArrayList;
 
 public class PersonController {
     private static final String YES_VALUE ="yes";
+
     //Housing Variables
     private static String rentTrouble;
     private static String subsidizedHousing;
@@ -30,16 +32,14 @@ public class PersonController {
 
     private static Person person = new Person(mhealth, housing, Milbranch, phealth, subAbuse);
 
-
-
-
     /**
      * The method takes all the housing data and brings it to the function to set housing flags.
      *
      * @return
      */
-    public boolean[] HousingList( ){
-        boolean housingArray[] =new boolean[3];
+    public static boolean[] HousingList( ){
+        boolean housingArray[] = new boolean[3];
+
         Housing housingTest= person.getHousingData();
 
         if(housingTest.getRentTrouble().equalsIgnoreCase(YES_VALUE)){
@@ -124,8 +124,6 @@ public class PersonController {
         return militaryArray;
     }
 
-
-
 public void DataBasePull(){
      ArrayList<String> housingList = DatabaseNG.getHousing(HousingList());
 
@@ -137,7 +135,9 @@ public void DataBasePull(){
 
     ArrayList<String> MiltaryList = DatabaseNG.getMilitaryBranch(MilitaryBranchList());
 }
-
+    public void GrabGuiTest () {
+        
+    }
 
 
 }

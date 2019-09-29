@@ -1,3 +1,4 @@
+package javaapplication25;
 //Object to parse survey data into an object such that the program can
 
 import java.util.Date;
@@ -42,4 +43,5 @@ public class Person {
     public SubstanceAbuse getSubAbuseData() {
         return subAbuseData;
     }
+
 }

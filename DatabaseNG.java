@@ -1,12 +1,7 @@
-/*
- * 
- * 
- * 
- */
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 /**
  *
@@ -30,7 +25,8 @@ public class DatabaseNG {
      
 //libs for MilitaryBranch File
     private static final String MILITARYBRANCH_SHEET_ONE="C:\\Users\\biscu\\Desktop\\CodeLinc\\JavaApplication25\\topics\\MilitaryBranch";
-    
+
+    private static final String YES_VALUE ="yes";
     private static String document;
     private static Scanner x;
     private static ArrayList<String> arrString = new ArrayList<String>();
@@ -40,10 +36,27 @@ public class DatabaseNG {
      * @return depending on what index of arr is true it will output 4 different csvs as an array string
      */
     //Takes a boolean array that has a size of 4
-    public static ArrayList getHousing(boolean[] arr) {
+
+    public static  ArrayList getHousing(Housing housingTest) {
+        
+         boolean housingArray[] = new boolean[4];
+         if(housingTest.getRentTrouble().equalsIgnoreCase(YES_VALUE)){
+            housingArray[0]=true;
+        }else housingArray[0]=false;
+        if(housingTest.getSubsidizedHousing().equalsIgnoreCase(YES_VALUE)){
+            housingArray[1]=true;
+        }else housingArray[1]=false;
+
+        if(housingTest.getVoucher().equalsIgnoreCase(YES_VALUE)){
+            housingArray[2]=true;
+        }else housingArray[2]=false;
+
+        if(housingTest.getHousingType().equalsIgnoreCase(YES_VALUE)){
+            housingArray[3]=true;
+        }else housingArray[3]=false;
         
         //opens and sends the housing type csv as a ArrayList
-        if (arr[0] == true) {
+        if (housingArray[0] == true) {
 
             try {
                 x = new Scanner(new File(HOUSING_SHEET_ONE));
@@ -61,7 +74,7 @@ public class DatabaseNG {
         }
 
         //opens and sends the rentTrouble csv as an ArrayList
-        if (arr[1] == true) {
+        if (housingArray[1] == true) {
 
             try {
                  x = new Scanner(new File(HOUSING_SHEET_TWO));
@@ -79,7 +92,7 @@ public class DatabaseNG {
 
         }
         //opens and sends the subsidizedHousing csv as an ArrayList
-        if (arr[2] == true) {
+        if (housingArray[2] == true) {
 
             try {
                 x = new Scanner(new File(HOUSING_SHEET_THREE));
@@ -96,7 +109,7 @@ public class DatabaseNG {
             return arrString2;
         }
         //opens and sends the voucher csv as an ArrayList
-        if (arr[3] == true) {
+        if (housingArray[3] == true) {
 
             try {
                 x = new Scanner(new File(HOUSING_SHEET_FOUR));
