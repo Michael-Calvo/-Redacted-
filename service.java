@@ -6,15 +6,15 @@ public class service {
     private String address;
     private String description;
     private ArrayList flags;
-    //String url;
+    private String URL;
 
-
-    public service(String name, String number, String address, String description, ArrayList flags) {
+    public service(String name, String number, String address, String description, ArrayList flags, String URL) {
         this.name = name;
         this.number = number;
         this.address = address;
         this.description = description;
         this.flags = flags;
+        this.URL = URL;
     }
 
     public String getName() {
@@ -57,5 +57,11 @@ public class service {
         this.flags = flags;
     }
 
+    public String getURL() {
+        return URL;
+    }
 
+    public void setURL(String URL) {
+        this.URL = URL;
+    }
 }
