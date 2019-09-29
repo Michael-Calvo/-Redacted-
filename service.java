@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-public class service {
+public class service { // Not being implemented right now, but can be used in a database setting
     private String name;
     private String number;
     private String address;
     private String description;
     private ArrayList flags;
-    //String url;
+    private String URL;
 
-
-    public service(String name, String number, String address, String description, ArrayList flags) {
+    public service(String name, String number, String address, String description, ArrayList flags, String URL) {
         this.name = name;
         this.number = number;
         this.address = address;
         this.description = description;
         this.flags = flags;
+        this.URL = URL;
     }
 
     public String getName() {
@@ -57,5 +57,11 @@ public class service {
         this.flags = flags;
     }
 
+    public String getURL() {
+        return URL;
+    }
 
+    public void setURL(String URL) {
+        this.URL = URL;
+    }
 }
