@@ -43,5 +43,5 @@ public class Person {
     public SubstanceAbuse getSubAbuseData() {
         return subAbuseData;
     }
-    
+
 }

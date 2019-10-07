@@ -1,15 +1,9 @@
-package javaapplication25;
-import java.sql.Driver;
+
 import java.util.ArrayList;
 
 public class PersonController {
     private static final String YES_VALUE ="yes";
-    
-    
-    //one yes or no for each variable
-    String[] insert = Javaapplication25.getString().split("[",",","]");
-    
-    //these will be used to create a Person class. This can speak to the backend. 
+
     //Housing Variables
     private static String rentTrouble;
     private static String subsidizedHousing;
@@ -30,7 +24,6 @@ public class PersonController {
     //Substance Abuse String
     private static String subAbuseString;
 
-
     private static Housing housing = new Housing(rentTrouble,subsidizedHousing,voucher,housingType);
     private static MentalHealth mhealth = new MentalHealth(mentalHealthString);
     private static MilitaryBranch Milbranch = new MilitaryBranch(branch,fullTime,serviceLength);
@@ -39,12 +32,6 @@ public class PersonController {
 
     private static Person person = new Person(mhealth, housing, Milbranch, phealth, subAbuse);
 
-    
-    
-    
-    
-
-
     /**
      * The method takes all the housing data and brings it to the function to set housing flags.
      *
@@ -52,6 +39,7 @@ public class PersonController {
      */
     public static boolean[] HousingList( ){
         boolean housingArray[] = new boolean[3];
+
         Housing housingTest= person.getHousingData();
 
         if(housingTest.getRentTrouble().equalsIgnoreCase(YES_VALUE)){
@@ -135,7 +123,8 @@ public class PersonController {
 
         return militaryArray;
     }
-    public void DataBasePull(){
+
+public void DataBasePull(){
      ArrayList<String> housingList = DatabaseNG.getHousing(HousingList());
 
     ArrayList<String> mentalList= DatabaseNG.getMentalHealth(MentalHealthList());
@@ -149,8 +138,6 @@ public class PersonController {
     public void GrabGuiTest () {
         
     }
-
-
 
 
 }
